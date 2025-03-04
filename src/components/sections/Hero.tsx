@@ -18,6 +18,13 @@ const Hero = () => {
       {/* Content */}
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
+          <div className="mb-6">
+            <img 
+              src="/lovable-uploads/5aec19d5-3eb5-4e68-9f88-9c60f5fc63f4.png" 
+              alt="NIFOLAD Construction Logo" 
+              className="h-24 md:h-32 mb-6"
+            />
+          </div>
           <span className="inline-block px-4 py-1 mb-4 text-sm font-medium text-white bg-navy/80 rounded-full">
             Premium Roofing & Construction Services
           </span>
