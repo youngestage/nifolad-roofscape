@@ -16,7 +16,7 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/5aec19d5-3eb5-4e68-9f88-9c60f5fc63f4.png" 
                 alt="NIFOLAD Construction Logo" 
-                className="h-20 mb-2 -ml-2"
+                className="h-40 w-20 mb-2 -ml-2"
               />
               <p className="text-gray-300 text-sm">
                 Building Strong Foundations, One Roof at a Time
