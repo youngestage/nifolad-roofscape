@@ -12,16 +12,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex flex-col">
-              <img 
-                src="/lovable-uploads/5aec19d5-3eb5-4e68-9f88-9c60f5fc63f4.png" 
-                alt="NIFOLAD Construction Logo" 
-                className="h-40 w-35 mb-2 -ml-2"
-              />
-              <p className="text-gray-300 text-sm">
-                Building Strong Foundations, One Roof at a Time
-              </p>
-            </div>
+            <h3 className="text-xl font-bold">NIFOLAD Construction</h3>
+            <p className="text-gray-300 text-sm">
+              Building Strong Foundations, One Roof at a Time
+            </p>
             <div className="flex space-x-3 pt-2">
               <a href="https://facebook.com" aria-label="Facebook" className="text-gray-300 hover:text-white transition-colors">
                 <Facebook size={18} />

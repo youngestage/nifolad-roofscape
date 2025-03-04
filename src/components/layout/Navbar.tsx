@@ -30,12 +30,8 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0">
-            <a href="#" className="flex items-center">
-              <img 
-                src="/lovable-uploads/5aec19d5-3eb5-4e68-9f88-9c60f5fc63f4.png" 
-                alt="NIFOLAD Construction Logo" 
-                className="h-12 md:h-16"
-              />
+            <a href="#" className="text-2xl font-bold text-navy">
+              NIFOLAD
             </a>
           </div>
 
@@ -45,7 +41,7 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-white hover:text-navy transition-colors duration-200"
+                className="text-gray-dark hover:text-navy transition-colors duration-200"
               >
                 {link.name}
               </a>
