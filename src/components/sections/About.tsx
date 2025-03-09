@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import { Shield, Hammer, Ruler, Cube } from "lucide-react";
+import { Shield, Hammer, Ruler, Package } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -54,7 +54,7 @@ const About = () => {
           {modelFailed ? (
             <div className="w-full h-[300px] flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl hover:shadow-xl transition-all duration-300">
               <div className="text-center p-6">
-                <Cube size={48} className="mx-auto mb-4 text-navy opacity-50" />
+                <Package size={48} className="mx-auto mb-4 text-navy opacity-50" />
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">NIFOLAD Construction</h3>
                 <p className="text-gray-600">Excellence in roofing and construction solutions</p>
               </div>
