@@ -1,6 +1,6 @@
 
-import React from "react";
-import { Shield, Hammer, Ruler } from "lucide-react";
+import React, { useState } from "react";
+import { Shield, Hammer, Ruler, Cube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -29,6 +29,8 @@ const features = [
 ];
 
 const About = () => {
+  const [modelFailed, setModelFailed] = useState(false);
+
   return (
     <section id="about" className="py-24 bg-white">
       <div className="container mx-auto px-4">
@@ -49,7 +51,19 @@ const About = () => {
         </div>
 
         <div className="mb-16 fade-in">
-          <ModelScene className="hover:shadow-xl transition-all duration-300 rounded-xl" />
+          {modelFailed ? (
+            <div className="w-full h-[300px] flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl hover:shadow-xl transition-all duration-300">
+              <div className="text-center p-6">
+                <Cube size={48} className="mx-auto mb-4 text-navy opacity-50" />
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">NIFOLAD Construction</h3>
+                <p className="text-gray-600">Excellence in roofing and construction solutions</p>
+              </div>
+            </div>
+          ) : (
+            <ModelScene 
+              className="hover:shadow-xl transition-all duration-300 rounded-xl" 
+            />
+          )}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
