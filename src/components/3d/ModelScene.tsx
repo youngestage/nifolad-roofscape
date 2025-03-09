@@ -1,5 +1,5 @@
 
-import React, { Suspense } from "react";
+import React, { Suspense, useState, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Environment } from "@react-three/drei";
 import RotatingCube from "./RotatingCube";
@@ -9,9 +9,44 @@ interface ModelSceneProps {
 }
 
 const ModelScene = ({ className = "" }: ModelSceneProps) => {
+  const [webGLSupported, setWebGLSupported] = useState(true);
+  
+  useEffect(() => {
+    // Check for WebGL support
+    try {
+      const canvas = document.createElement('canvas');
+      const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+      setWebGLSupported(!!gl);
+    } catch (e) {
+      console.error("WebGL detection error:", e);
+      setWebGLSupported(false);
+    }
+  }, []);
+
+  if (!webGLSupported) {
+    return (
+      <div className={`w-full h-[300px] ${className} flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl`}>
+        <div className="text-center p-6">
+          <h3 className="text-xl font-semibold text-gray-800 mb-2">Interactive 3D View</h3>
+          <p className="text-gray-600">Your browser doesn't support WebGL, which is required for 3D visualization.</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className={`w-full h-[300px] ${className}`}>
-      <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
+      <Canvas
+        camera={{ position: [0, 0, 5], fov: 50 }}
+        onCreated={({ gl }) => {
+          gl.setClearColor("#f8fafc", 1);
+        }}
+        fallback={
+          <div className="flex items-center justify-center h-full">
+            <p className="text-gray-600">Loading 3D elements...</p>
+          </div>
+        }
+      >
         <ambientLight intensity={0.5} />
         <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
         <pointLight position={[-10, -10, -10]} />
