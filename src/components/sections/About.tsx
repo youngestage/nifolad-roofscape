@@ -1,4 +1,5 @@
 
+import React from "react";
 import { Shield, Hammer, Ruler } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -7,6 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import ModelScene from "@/components/3d/ModelScene";
 
 const features = [
   {
@@ -44,6 +46,10 @@ const About = () => {
             galvanized truss construction. With every project, we bring together craftsmanship, 
             innovation, and reliability to exceed our clients' expectations.
           </p>
+        </div>
+
+        <div className="mb-16 fade-in">
+          <ModelScene className="hover:shadow-xl transition-all duration-300" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
