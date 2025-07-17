@@ -46,10 +46,12 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <Button size="sm" className="bg-navy hover:bg-navy-light">
-              <Phone className="mr-2 h-4 w-4" />
-              Get a Quote
-            </Button>
+            <a href="#get-quote">
+              <Button size="sm" className="bg-navy hover:bg-navy-light">
+                <Phone className="mr-2 h-4 w-4" />
+                Get a Quote
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Navigation Button */}
@@ -79,10 +81,12 @@ const Navbar = () => {
                   {link.name}
                 </a>
               ))}
-              <Button size="sm" className="w-full bg-navy hover:bg-navy-light mt-4">
-                <Phone className="mr-2 h-4 w-4" />
-                Get a Quote
-              </Button>
+              <a href="#get-quote" className="block w-full" onClick={() => setIsMenuOpen(false)}>
+                <Button size="sm" className="w-full bg-navy hover:bg-navy-light mt-4">
+                  <Phone className="mr-2 h-4 w-4" />
+                  Get a Quote
+                </Button>
+              </a>
             </div>
           </div>
         )}

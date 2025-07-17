@@ -117,7 +117,7 @@ const Contact = () => {
               </div>
             </div>
             
-            <div className="mt-8">
+            <div id="get-quote" className="mt-8">
               <Dialog>
                 <DialogTrigger asChild>
                   <Button className="bg-navy hover:bg-navy-light w-full">
