@@ -10,35 +10,42 @@ const projects = [
     title: "Modern Residential Roofing",
     category: "Gerard Roof Installations",
     description: "Premium Gerard roof installation for a contemporary home",
-    image: "https://images.unsplash.com/photo-1439337153520-7082a56a81f4",
+    image: "/Gallery/roof1.jpg",
   },
   {
     id: 2,
     title: "Custom Woodwork Design",
     category: "Woodwork Forming Projects",
     description: "Precision woodwork forming for unique architectural features",
-    image: "https://images.unsplash.com/photo-1486718448742-163732cd1544",
+    image: "/Gallery/roof2.jpg",
   },
   {
     id: 3,
     title: "Commercial Complex",
     category: "Galvanized Truss Constructions",
     description: "Large-scale galvanized truss installation for commercial building",
-    image: "https://images.unsplash.com/photo-1497604401993-f2e922e5cb0a",
+    image: "/Gallery/roof3.jpg",
   },
   {
     id: 4,
     title: "Modern Architecture",
     category: "Gerard Roof Installations",
     description: "Contemporary roofing solution for modern architecture",
-    image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625",
+    image: "/Gallery/roof4.jpg",
   },
   {
     id: 5,
     title: "Structural Excellence",
     category: "Galvanized Truss Constructions",
     description: "Complex structural solutions with galvanized trusses",
-    image: "https://images.unsplash.com/photo-1431576901776-e539bd916ba2",
+    image: "/Gallery/roof5.jpg",
+  },
+  {
+    id: 6,
+    title: "Premium Roof Finish",
+    category: "Gerard Roof Installations",
+    description: "High-quality finishing touches on a residential roof project",
+    image: "/Gallery/roof6.jpg",
   },
 ];
 
@@ -108,11 +115,12 @@ const Gallery = () => {
               className="group relative overflow-hidden rounded-lg shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               onClick={() => setSelectedImage(index)}
             >
-              <div className="aspect-w-16 aspect-h-12 overflow-hidden">
+              <div className="aspect-[4/3] overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+                  className={`w-full h-full transition-transform duration-300 group-hover:scale-105 ${project.id === 1 ? 'object-cover object-top' : 'object-cover'}`}
+                  style={{ width: '100%', height: '100%' }}
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">

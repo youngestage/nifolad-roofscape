@@ -1,56 +1,73 @@
-# Welcome to your Lovable project
+# Nifolad Roofscape
 
-## Project info
+A modern, responsive website for Nifolad Roofscape, built with React, TypeScript, and Vite.
 
-**URL**: https://lovable.dev/projects/f505a202-c932-4c30-90b6-43f788e7e5ba
+## 🚀 Features
 
-## How can I edit this code?
+- ⚡ Blazing fast performance with Vite
+- 🎨 Beautiful UI components built with Shadcn/UI
+- 📱 Fully responsive design
+- 🎨 Modern and clean user interface
+- 🛠️ Easy to customize and extend
 
-There are several ways of editing your application.
+## 🛠️ Tech Stack
 
-**Use Lovable**
+- [React](https://reactjs.org/) - JavaScript library for building user interfaces
+- [TypeScript](https://www.typescriptlang.org/) - Type-safe JavaScript
+- [Vite](https://vitejs.dev/) - Next Generation Frontend Tooling
+- [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework
+- [Shadcn/UI](https://ui.shadcn.com/) - Beautifully designed components
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f505a202-c932-4c30-90b6-43f788e7e5ba) and start prompting.
+## 🚀 Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- Node.js (v16 or later)
+- npm (v7 or later) or yarn
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Installation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. Clone the repository:
 
-Follow these steps:
+   ```bash
+   git clone https://github.com/yourusername/nifolad-roofscape.git
+   cd nifolad-roofscape
+   ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+2. Install dependencies:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+   ```bash
+   npm install
+   # or
+   yarn
+   ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+3. Start the development server:
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. Open [http://localhost:5173](http://localhost:5173) in your browser to see the result.
+
+## 🏗️ Project Structure
+
+```text
+src/
+├── components/       # Reusable UI components
+│   ├── layout/      # Layout components (Header, Footer, etc.)
+│   ├── sections/    # Page sections
+│   └── ui/          # Shadcn/UI components
+├── pages/           # Page components
+├── hooks/           # Custom React hooks
+└── lib/             # Utility functions and configurations
 ```
 
-**Edit a file directly in GitHub**
+## 📝 License
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 This project is built with .
 
